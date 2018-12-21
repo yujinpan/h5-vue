@@ -1,0 +1,59 @@
+/* 实现移动端的常用布局样式 */
+
+/* 半像素边框 */
+
+.mobile-border-after(@width: 1px, @style: solid, @color: inherit) {
+  position: relative;
+  > * {
+    position: relative;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    border-width: @width;
+    border-style: @style;
+    border-color: @color;
+    transform-origin: 0 0;
+    transform: scale(0.5);
+  }
+}
+
+.mobile-border {
+  .mobile-border-after();
+}
+
+.mobile-border-top {
+  .mobile-border-after(1px 0 0 0);
+}
+
+.mobile-border-right {
+  .mobile-border-after(0 1px 0 0);
+}
+
+.mobile-border-left {
+  .mobile-border-after(0 0 0 1px);
+}
+
+.mobile-border-bottom {
+  .mobile-border-after(0 0 1px 0);
+}
+
+/* 点击效果 */
+
+.mobile-btn,
+.mobile-btn-drak {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.mobile-btn:active {
+  opacity: 0.3;
+}
+
+.mobile-btn-drak:active {
+  background: #e8e8e8;
+}

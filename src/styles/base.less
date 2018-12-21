@@ -1,0 +1,103 @@
+@base-size: 20px;
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  color: #444;
+  font-family: sans-serif;
+  font-size: @base-size;
+  font-size: unit(@base-size / 375 * 100, vw);
+  line-height: 1;
+  background: white;
+}
+
+body {
+  position: relative;
+  min-width: 320px;
+  max-width: 640px;
+  min-height: 100vh;
+  margin: 0 auto;
+  -webkit-text-size-adjust: none;
+}
+
+button,
+input,
+textarea {
+  background: none;
+  border: 0;
+  outline: 0;
+  font-size: inherit;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label {
+  font: inherit;
+}
+
+ul,
+li,
+dl,
+dt,
+dd {
+  list-style: none;
+}
+
+.list-message {
+  color: #999;
+  padding: 20px 0;
+  text-align: center;
+}
+
+@media screen and (max-width: 320px) {
+  html {
+    font-size: @base-size;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  html {
+    font-size: @base-size * 1.6;
+  }
+}
+
+// 渐隐过渡效果
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
+// 左右滑动过渡效果
+.slide-child-view {
+  min-height: 100vh;
+  transition: all 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+}
+.slide-left-enter,
+.slide-right-leave-active {
+  opacity: 0;
+  transform: translate(30px, 0);
+}
+.slide-left-leave-active,
+.slide-right-enter {
+  opacity: 0;
+  transform: translate(-30px, 0);
+}

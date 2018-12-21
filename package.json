@@ -1,0 +1,33 @@
+{
+  "name": "h5-vue",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "npm run serve",
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "@types/fastclick": "^1.0.28",
+    "@types/mockjs": "^1.0.2",
+    "axios": "^0.18.0",
+    "fastclick": "^1.0.6",
+    "mockjs": "^1.0.1-beta3",
+    "vue": "^2.5.17",
+    "vue-class-component": "^6.0.0",
+    "vue-property-decorator": "^7.0.0",
+    "vue-router": "^3.0.2"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-typescript": "^3.2.0",
+    "@vue/cli-service": "^3.2.0",
+    "file-loader": "^2.0.0",
+    "less": "^3.9.0",
+    "less-loader": "^4.1.0",
+    "postcss-pxtorem": "^4.0.1",
+    "typescript": "^3.0.0",
+    "url-loader": "^1.1.2",
+    "vue-template-compiler": "^2.5.17"
+  }
+}
