@@ -7,7 +7,29 @@
 ## 简介
 
 **项目采用 Vue 的多页应用（multi-page）结构，增加 TypeScript 支持。**<br>
-**实例中整理了两种，一种带 router，一种不带。**
+
+**基于 vue-cli，增加功能：**
+
+- 增加 `vue-class-component`，`vue-property-decorator` 的 vue 支持 TypeScript 扩展。
+- 增加多页打包，在`src/pages/`下的页面都是单独的页面，打包后生成每个文件夹名称的入口模版文件，vendor 是共享的。
+- 增加 `fastclick.js`，解决移动端 300ms 问题（引发的 ios 上的输入标签点击不弹出键盘问题已解决）。
+- 增加 `mock.js`，前后端分离必备，这里开发环境与生产环境也已做分离。
+- 增加 `postcss-pxtorem`，开发中只需写实际尺寸，编译后会比转换为 rem 单位。
+- 增加 `axios`，使用 promise 进行接口交互，axios。
+- 增加 `local-storage` 工具函数，方便且独立操作本地存储。
+- 增加 `src/utils/request.ts` 工具函数封装 axios，加入常用的错误处理与加载效果。
+- 增加 `src/utils/router.ts` 工具函数处理链接上的参数（在你不使用 vue-router 时可以用工具函数）。
+- 增加 `src/directives/autofoucs.ts` 指令，自动聚焦，这是一个小实例，指令都可以在这里扩展。
+- 增加 `src/api/example.ts` 实例接口方法，接口都在这个文件夹里扩展。
+- 增加`vue-router`可选配置，以及路由左右切换的过渡动效。
+- 增加全局的默认样式，响应式适配手机屏幕（`unit(@base-size / 375 * 100, vw)`）。
+- 增加移动端常用样式，半像素边框与点击效果。
+- 增加默认的左右切换与渐隐过渡效果。
+- 增加全局的 vue 插件 - `$message`弹窗提示，在 vue 实例中使用`this.$message.toggle(message: string)`快速调用弹窗。
+- 增加全局的 vue 插件 - `$loading`加载状态，在 vue 实例中使用`this.$loading.toggle(state?: boolean)`快速调用加载。
+- 增加 vue 全局参数与方法的 TypeScript 声明文件`src/types/global-vue.d.ts`，易于扩展。
+- 增加开发服务器环境变量配置`.env`，支持正式服务器的域名与接口路径配置（利用代理与 node 环境变量）。
+- 增加编辑器 VSCode 配置文件，格式化与检查代码符合 tslint 标准。
 
 **开发之前务必阅读的文档：**
 
