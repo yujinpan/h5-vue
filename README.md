@@ -8,7 +8,7 @@
 
 项目采用 Vue 的多页应用（multi-page）结构，增加 TypeScript 支持。
 
-**基于 vue-cli，增加功能：**
+**在 vue-cli 基础上，增加了如下功能：**
 
 - 增加 `vue-class-component`，`vue-property-decorator` 的 vue 支持 TypeScript 扩展。
 - 增加多页打包，在`src/pages/`下的页面都是单独的页面，打包后生成每个文件夹名称的入口模版文件，vendor 是共享的。
