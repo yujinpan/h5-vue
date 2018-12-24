@@ -1,6 +1,6 @@
 <template>
   <div class="list">
-    <router-link class="link" :to="'/'">返回</router-link>
+    <router-link class="link" :to="'/'" replace>返回</router-link>
     <ul>
       <li v-for="(item, index) in 10" :key="index">{{index + 1}}</li>
     </ul>
