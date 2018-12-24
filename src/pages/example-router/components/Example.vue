@@ -2,6 +2,8 @@
   <div class="example">
     <router-link class="link" :to="'list'">list</router-link>
     {{message}}
+    <!-- pv组件 -->
+    <Pv/>
   </div>
 </template>
 
@@ -9,7 +11,13 @@
 import { Component, Prop, Vue } from 'vue-property-decorator';
 import { getExample } from '@/api/example';
 
-@Component
+import Pv from '@/components/Pv.vue';
+
+@Component({
+  components: {
+    Pv
+  }
+})
 export default class Example extends Vue {
   message: string = '';
 
