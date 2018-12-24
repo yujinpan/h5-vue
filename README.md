@@ -1,12 +1,12 @@
 # h5-vue
 
-用 vue 写 h5 项目的基本结构与依赖整理，快速开发 h5 的脚手架。<br>
+用 vue 写 h5 项目的基本结构与依赖整理，封装常用工具，快速开发 h5 的脚手架。<br>
 
 [TOC]
 
 ## 简介
 
-**项目采用 Vue 的多页应用（multi-page）结构，增加 TypeScript 支持。**<br>
+项目采用 Vue 的多页应用（multi-page）结构，增加 TypeScript 支持。
 
 **基于 vue-cli，增加功能：**
 
@@ -43,7 +43,7 @@
 ## 项目结构
 
 - src: 主业务代码。
-  - api:  接口处理
+  - api: 接口处理
   - assets: 公共资源
   - components: 公共组件
   - directives: 公共指令
@@ -70,7 +70,7 @@
 ## 开始
 
 - 安装: `npm install`
-- 开发（mock）: `npm start`
+- 开发（mock）: `npm start`
 - 开发（接口）: `npm start -production`
 - 生产: `npm run build`
 - 规范: `npm run lint`
@@ -78,7 +78,7 @@
 
 ## 附录
 
-### Vue + TypeScript 文档
+### Vue + TypeScript 文档
 
 官方文档：[vue-class-component](https://github.com/vuejs/vue-class-component)
 
@@ -199,7 +199,7 @@ class MyComp extends Vue {
 
 ### 装饰器扩展指南
 
- 官方文档：[vue-property-decorator](https://github.com/kaorun343/vue-property-decorator)
+官方文档：[vue-property-decorator](https://github.com/kaorun343/vue-property-decorator)
 
 - @Prop(options: (PropOptions | Constructor[] | Constructor) = {})
 
