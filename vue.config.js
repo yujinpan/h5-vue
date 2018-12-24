@@ -29,6 +29,8 @@ fs.readdirSync(pagesDir)
 console.info(`pages config：${JSON.stringify(pagesCofig)}`);
 
 module.exports = {
+  baseUrl:
+    process.env.NODE_ENV === 'production' ? process.env.VUE_APP_BASE_URL : '/',
   productionSourceMap: false,
   // multi-page 多页模式
   pages: pagesCofig,
