@@ -1,6 +1,6 @@
 <template>
   <div class="example">
-    <a class="link" href="/example-router.html">查看带router的实例</a>
+    <a class="link" href="./example-router.html">查看带router的实例</a>
     {{message}}
   </div>
 </template>
