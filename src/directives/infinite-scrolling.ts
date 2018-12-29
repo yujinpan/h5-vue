@@ -1,9 +1,9 @@
-import { DirectiveBinding } from 'vue/types/options';
-
 /**
  * 无限滚动
  * @callback binding.value 滚动到底部回调
  */
+import { DirectiveBinding } from 'vue/types/options';
+
 // 滚动回调
 let scrollToBottomCallback: any = null;
 // 滚动事件节流定时器ID
