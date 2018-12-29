@@ -1,5 +1,5 @@
 /**
- * mock 数据的入口文件
+ * 引入业务 mock
  */
 import './example';
 import './pv';

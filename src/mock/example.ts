@@ -1,4 +1,4 @@
-import createServer from './create';
+import createServer from '@/utils/mock-creator';
 
 /**
  * example接口 mock 数据
