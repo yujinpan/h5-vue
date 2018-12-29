@@ -1,8 +1,10 @@
 /**
- * request.ts 适用于活动页面，当前版本适用于公交车查询页面。
- * 1. 封装 axios 的错误处理
- * 2. 添加加载状态
- * 3. requestNoLoading 是为了处理轮训接口，轮训接口需要一直展示加载状态
+ * 对 axios 的封装。
+ * @description
+ *   1. 封装 axios 的错误处理。
+ *   2. 添加加载状态。
+ * @method request(options) 发送请求，返回 promise，并且在开始时添加加载状态，结束时结束加载状态。
+ * @method requestNoLoading(options) 发送请求，返回 promise。
  */
 import axios from 'axios';
 
@@ -17,6 +19,9 @@ const options = {
 // 创建 axios 实例
 const request = axios.create(options);
 export default request;
+
+// requestNoLoading 不带加载状态
+export const requestNoLoading = axios.create(options);
 
 // 请求拦截
 request.interceptors.request.use((config) => {
@@ -33,6 +38,16 @@ request.interceptors.response.use(
   },
   (error) => {
     toggleLoading(false);
+    return errorHandler(error);
+  }
+);
+
+// requestNoLoading 的返回处理
+requestNoLoading.interceptors.response.use(
+  (response: any) => {
+    return backendErrorHandler(response);
+  },
+  (error) => {
     return errorHandler(error);
   }
 );
