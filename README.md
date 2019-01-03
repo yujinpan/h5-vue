@@ -14,6 +14,7 @@
 - 增加多页打包，在`src/pages/`下的页面都是单独的页面，打包后生成每个文件夹名称的入口模版文件，vendor 是共享的。
 - 增加 `fastclick.js`，解决移动端 300ms 问题（引发的 ios 上的输入标签点击不弹出键盘问题已解决）。
 - 增加 `mock.js`，前后端分离必备，这里开发环境与生产环境也已做分离。
+- 增加 `unit-jest` 单元测试插件。
 - 增加 `postcss-pxtorem`，开发中只需写实际尺寸，编译后会比转换为 rem 单位。
 - 增加 `axios`，使用 promise 进行接口交互，axios。
 - 增加 `local-storage` 工具函数，方便且独立操作本地存储。
@@ -54,6 +55,7 @@
   - styles: 公共的可选样式
   - types: TypeScript 声明文件
   - utils: 工具函数
+- tests/unit: 单元测试用例。
 - .env: 环境变量配置。
 - .postcssrc.js: postcss 配置文件。
 - tsconfig.json: TypeScript 的配置文件。
