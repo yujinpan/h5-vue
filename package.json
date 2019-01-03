@@ -3,10 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "npm run serve",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "start": "npm run serve",
+    "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
     "@types/fastclick": "^1.0.28",
@@ -22,12 +23,16 @@
     "vue-router": "^3.0.2"
   },
   "devDependencies": {
+    "@types/jest": "^23.1.4",
     "@vue/cli-plugin-typescript": "^3.2.0",
+    "@vue/cli-plugin-unit-jest": "^3.2.2",
     "@vue/cli-service": "^3.2.0",
+    "@vue/test-utils": "^1.0.0-beta.20",
     "file-loader": "^2.0.0",
     "less": "^3.9.0",
     "less-loader": "^4.1.0",
     "postcss-pxtorem": "^4.0.1",
+    "ts-jest": "^23.0.0",
     "typescript": "^3.0.0",
     "url-loader": "^1.1.2",
     "vue-template-compiler": "^2.5.17"
