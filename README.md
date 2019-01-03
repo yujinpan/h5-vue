@@ -76,6 +76,7 @@
 - 开发（接口）: `npm start -production`
 - 生产: `npm run build`
 - 规范: `npm run lint`
+- 测试: `npm run test:unit`
 - 开始: [http://localhost:8080/example.html](http://localhost:8080/example.html)
 
 ## 附录
