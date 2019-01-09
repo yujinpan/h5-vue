@@ -3,6 +3,7 @@
  * @callback binding.value 滚动到底部回调
  */
 import { DirectiveBinding } from 'vue/types/options';
+import { getScrollTop } from '@/utils/scroll';
 
 // 滚动回调
 let scrollToBottomCallback: any = null;
@@ -17,7 +18,7 @@ const onScroll = () => {
   }
   scrollEventTimeId = setTimeout(() => {
     const bodyHeight = document.body.offsetHeight;
-    const scrollTop = (document.scrollingElement || { scrollTop: 0 }).scrollTop;
+    const scrollTop = getScrollTop();
     if (bodyHeight - screenHeight - scrollTop < 20) {
       // callback
       if (scrollToBottomCallback) {
